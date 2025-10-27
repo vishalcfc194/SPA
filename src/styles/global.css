@@ -184,6 +184,7 @@ body.modal-open-blur .topbar {
 }
 
 /* Off-canvas sidebar and overlay for small screens */
+
 .sidebar {
     transition: transform 0.25s ease, width 0.2s ease;
 }
