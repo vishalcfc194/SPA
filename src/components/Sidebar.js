@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ open = true }) => {
   return (
-    <aside className="sidebar bg-light border-end">
+    <aside
+      className={`sidebar bg-light border-end ${open ? "open" : "closed"}`}
+    >
       <div className="sidebar-header p-3 text-center">
         <img src="/logo.png" alt="logo" className="logo-img" />
         <h5 className="m-0" style={{ fontFamily: "Poppins" }}>

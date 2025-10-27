@@ -1,9 +1,16 @@
 import React from "react";
 
-const Topbar = () => {
+const Topbar = ({ toggleSidebar }) => {
   return (
-    <header className="topbar d-flex align-items-center justify-content-between px-4 py-2 border-bottom bg-white">
+    <header className="topbar d-flex align-items-center justify-content-between px-3 py-2 border-bottom bg-white">
       <div className="d-flex align-items-center">
+        <button
+          className="btn btn-outline-secondary me-2 d-md-none"
+          onClick={toggleSidebar}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
         <img src="/logo.png" alt="logo" className="logo-img me-3" />
         <div>
           <h5 className="m-0" style={{ fontFamily: "Poppins" }}>
@@ -15,7 +22,7 @@ const Topbar = () => {
         </div>
       </div>
       <div className="d-flex align-items-center">
-        <div className="me-3 text-end">
+        <div className="me-3 text-end d-none d-md-block">
           <div className="fw-bold">7440534727</div>
           <div className="small text-muted">
             cindrellathefamilyspa@gmail.com
